@@ -10,7 +10,7 @@
   <arg name="save_path"        default=""/>
   <arg name="withIDRes"        default="false"/>
   <arg name="wait"             default="false"/>
-
+  <arg name="port"             default="8081"/>
   <arg name="parallel"         default="false"/>
   <arg name="pervasive"        default="false"/>
   <arg name="enableQnA"        default="false"/>
@@ -37,5 +37,9 @@
     <param name="pervasive"        type="bool" value="$(arg pervasive)"/>
     <param name="enableQnA"        type="bool" value="$(arg enableQnA)"/>
   </node>
+
+  <node name="rs_visualizer" pkg="web_video_server" type="web_video_server" output="screen" respawn="true">
+   <param name="port"               type="int"  value="$(arg port)"/>
+  </node> 
   
 </launch>
