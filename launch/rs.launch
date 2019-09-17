@@ -1,7 +1,7 @@
 <launch>
   <!-- Analysis engines to execute, comma separated list: eninge1,engine2,... -->
   
-  <arg name="ae"               default="demo"/> <!-- Short version for analysis_engines -->
+  <arg name="ae"               default="ease_fs_demo"/> <!-- Short version for analysis_engines -->
   <arg name="analysis_engines" default="$(arg ae)"/>
   <!-- Enable / disable visualization -->
   <arg name="vis"              default="false"/> <!-- Short version for visualization -->
@@ -38,7 +38,7 @@
     <param name="enableQnA"        type="bool" value="$(arg enableQnA)"/>
   </node>
 
-  <node name="rs_visualizer" pkg="web_video_server" type="web_video_server" output="screen" respawn="true">
+   <node name="rs_visualizer" pkg="web_video_server" type="web_video_server" output="screen" respawn="true">
    <param name="port"               type="int"  value="$(arg port)"/>
   </node> 
   
