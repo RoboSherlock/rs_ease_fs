@@ -1,13 +1,13 @@
 ae:
-  name: demo
+  name: ease_fs_demo
 fixedflow:
   - CollectionReader
   - ImagePreprocessor
-  - PointCloudFilter
+  - RegionFilter
   - NormalEstimator
   - PlaneAnnotator
-  - ImageSegmentationAnnotator
   - PointCloudClusterExtractor
   - ClusterMerger
 CollectionReader:
   camera_config_files: ['config_kinect_robot_ease_fs.ini']
+
