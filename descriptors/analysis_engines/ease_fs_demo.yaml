@@ -10,4 +10,5 @@ fixedflow:
   - ClusterMerger
 CollectionReader:
   camera_config_files: ['config_kinect_robot_ease_fs.ini']
-
+RegionFilter:
+  enable_change_detection: false
